@@ -72,23 +72,6 @@ Open http://localhost:3000
 
 ---
 
-## EVERY TIME AFTER (no reinstall needed)
-
-### Terminal 1
-```powershell
-cd D:\APPS\finrisk_final\backend
-venv\Scripts\activate
-python app.py
-```
-
-### Terminal 2
-```powershell
-cd D:\APPS\finrisk_final\frontend
-npm start
-```
-
----
-
 ## API Endpoints
 
 | Method | Endpoint           | Auth | Description              |
@@ -105,16 +88,3 @@ npm start
 
 ---
 
-## Database Location
-```
-D:\APPS\finrisk_final\backend\data\finrisk.db
-```
-View with DB Browser for SQLite: https://sqlitebrowser.org
-
-## Common Errors
-| Error | Fix |
-|-------|-----|
-| ModuleNotFoundError: utils | cd into backend/ first |
-| Model not found | Run python models/train.py first |
-| Execution policy error | Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser |
-| npm not found | Install Node.js from https://nodejs.org |
