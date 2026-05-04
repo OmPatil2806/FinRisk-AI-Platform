@@ -30,21 +30,70 @@ The application is fully deployed and publicly accessible.
 | Frontend | Vercel | [fin-risk-ai-platform-kx6fha4vo-ompatil2806s-projects.vercel.app](https://fin-risk-ai-platform-kx6fha4vo-ompatil2806s-projects.vercel.app/) |
 | Backend API | Render | [finrisk-ai-platform.onrender.com](https://finrisk-ai-platform.onrender.com) |
 
-> The backend is hosted on Render free tier and may take 30–50 seconds to respond after a period of inactivity.
 
 ---
 
-## Features
+## How It Works
 
-- Auth — Register / Login / Logout with SQLite sessions
-- AI Risk Prediction — Low / Medium / High (Random Forest, 32,424 samples)
-- Financial Health Score — composite 0–100 formula
-- AI Insight Engine — rule-based personalized signals
-- Multi-Currency — USD, INR, EUR, GBP, AED, SGD, JPY, CAD (live rates)
-- Investment Intelligence — SIP calculator, fund recommendations, asset allocation
-- Analysis History — stats, filter by risk, delete
-- PDF Report — 3-page branded download (jsPDF)
-- SQLite Database — users, sessions, analyses
+### 1. Authentication
+Register with name, email and password. Every session is secured with a token stored in SQLite. Login and logout are fully supported. All analysis history is tied to your account.
+
+### 2. Financial Profile Input
+Enter your complete financial profile including age, employment status, education, monthly income, monthly expenses, total savings, debt-to-income ratio, credit score, and loan details (type, amount, EMI, interest rate, tenure). All amount fields support multi-currency input.
+
+### 3. Multi-Currency Support
+Select your preferred currency from the navbar — USD, INR, EUR, GBP, AED, SGD, JPY, or CAD. Live exchange rates are fetched from ExchangeRate API. All inputs and outputs automatically convert to and from your selected currency. Your preference is saved across sessions.
+
+### 4. AI Risk Classification Dashboard
+After submitting your profile, the ML model runs a full analysis and returns:
+
+- **Risk Level** — Low, Medium, or High, predicted by a Random Forest classifier trained on 32,424 records
+- **Financial Health Score** — a composite score from 0 to 100 based on expense ratio, EMI burden, credit score, savings buffer, and DTI
+- **Confidence Breakdown** — probability percentages for each risk class
+- **Quick Metrics** — net monthly savings, expense ratio, stress index, months of emergency buffer
+- **AI Insight Engine** — rule-based personalized signals such as overspending warnings, debt overload alerts, credit score flags, and savings recommendations
+- **Engineered Feature Matrix** — all 14 derived financial features with warning highlights
+
+### 5. Download PDF Report
+Generate and download a 3-page branded PDF report containing your full financial profile, risk classification, confidence breakdown, engineered feature matrix, all AI insights, and your complete investment plan including SIP projections and fund recommendations.
+
+### 6. Investment Intelligence
+Based on your risk profile, the platform generates a personalized investment plan:
+
+- **Monthly Investable Amount** — calculated after expenses, EMI, and emergency fund allocation
+- **Recommended Monthly SIP** — 70% of investable amount directed toward systematic investment
+- **Emergency Fund Target** — 6 months of expenses as a safety buffer with monthly contribution suggestion
+
+### 7. SIP Calculator
+Interactive SIP calculator where you can adjust monthly SIP amount, time period (years), and expected annual return rate. Results update in real time showing:
+
+- Invested Amount
+- Estimated Gains
+- Total Portfolio Value
+- Year-by-year projection table (1, 3, 5, 10, 15, 20, 25, 30 years)
+- Money multiplier
+
+### 8. Asset Allocation
+Recommended portfolio split based on your risk profile:
+
+| Profile | Equity | Debt | Gold | Cash |
+|---------|--------|------|------|------|
+| Low Risk | 70% | 20% | 5% | 5% |
+| Medium Risk | 45% | 35% | 10% | 10% |
+| High Risk | 20% | 50% | 15% | 15% |
+
+### 9. Recommended Funds
+Curated mutual fund recommendations based on your risk level with 3-year and 5-year historical returns, minimum SIP amount, and direct invest links to:
+
+- **Groww** — best for beginners, zero commission
+- **Zerodha Coin** — direct mutual funds, zero commission
+- **ET Money** — smart portfolio tools and SIP tracking
+- **Kuvera** — goal-based investing
+- **Paytm Money** — easy SIP setup
+- **Vanguard** — global index funds for international exposure
+
+### 10. Analysis History
+Every analysis is saved to your account. The history page shows all past analyses with date, risk level, health score, income, and credit score. Filter by High, Medium, or Low risk. Click any row to view full details including insights and probabilities. Delete individual records.
 
 ---
 
