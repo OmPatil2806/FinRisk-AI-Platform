@@ -9,11 +9,28 @@
 [![React](https://img.shields.io/badge/React-18-61DAFB?style=flat-square&logo=react&logoColor=black)](https://react.dev)
 [![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white)](https://sqlite.org)
 [![scikit-learn](https://img.shields.io/badge/scikit--learn-1.5-F7931E?style=flat-square&logo=scikit-learn&logoColor=white)](https://scikit-learn.org)
+[![Deployed on Vercel](https://img.shields.io/badge/Frontend-Vercel-000000?style=flat-square&logo=vercel&logoColor=white)](https://fin-risk-ai-platform-kx6fha4vo-ompatil2806s-projects.vercel.app/)
+[![Deployed on Render](https://img.shields.io/badge/Backend-Render-46E3B7?style=flat-square&logo=render&logoColor=white)](https://finrisk-ai-platform.onrender.com)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](LICENSE)
 
 Predicts **Low / Medium / High** financial risk using Random Forest ML · Computes Health Score (0–100) · Generates AI insights · SIP calculator · Multi-currency · PDF reports
 
+**[Live Demo](https://fin-risk-ai-platform-kx6fha4vo-ompatil2806s-projects.vercel.app/)**
+
 </div>
+
+---
+
+## Deployment
+
+The application is fully deployed and publicly accessible.
+
+| Layer | Platform | URL |
+|-------|----------|-----|
+| Frontend | Vercel | [fin-risk-ai-platform-kx6fha4vo-ompatil2806s-projects.vercel.app](https://fin-risk-ai-platform-kx6fha4vo-ompatil2806s-projects.vercel.app/) |
+| Backend API | Render | [finrisk-ai-platform.onrender.com](https://finrisk-ai-platform.onrender.com) |
+
+> The backend is hosted on Render free tier and may take 30–50 seconds to respond after a period of inactivity.
 
 ---
 
@@ -54,7 +71,7 @@ finrisk-ai-platform/
 
 ---
 
-## Quick Start
+## Local Setup
 
 **Terminal 1 — Backend**
 ```bash
@@ -70,8 +87,6 @@ python app.py
 cd frontend
 npm install && npm start
 ```
-
-Open [http://localhost:3000](http://localhost:3000)
 
 ---
 
@@ -104,18 +119,12 @@ Key engineered features: `expense_ratio`, `emi_ratio`, `financial_stress_index`,
 
 ---
 
-## Database
-
-Auto-created at `backend/data/finrisk.db` on first run.
-View with [DB Browser for SQLite](https://sqlitebrowser.org).
-
----
-
 ## Tech Stack
 
 **Backend** — Python 3.12 · Flask 3.0 · scikit-learn 1.5 · pandas · SQLite · Werkzeug  
 **Frontend** — React 18 · jsPDF · ExchangeRate API  
-**ML** — Random Forest · StandardScaler · OrdinalEncoder · ColumnTransformer
+**ML** — Random Forest · StandardScaler · OrdinalEncoder · ColumnTransformer  
+**Deployment** — Vercel (frontend) · Render (backend)
 
 ---
 
