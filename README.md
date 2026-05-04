@@ -15,7 +15,7 @@
 
 Predicts **Low / Medium / High** financial risk using Random Forest ML · Computes Health Score (0–100) · Generates AI insights · SIP calculator · Multi-currency · PDF reports
 
-**[Live Demo](https://fin-risk-ai-platform-kx6fha4vo-ompatil2806s-projects.vercel.app/)**
+**[Live Demo](https://fin-risk-ai-platform.vercel.app/)**
 
 </div>
 
